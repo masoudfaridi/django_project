@@ -22,7 +22,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("users/", include("app_user.api.urls")),
     path("authentication/", include("app_authentication.api.urls")),
-    path("app_authentication_s_jwt/", include("app_authentication_s_jwt.api.urls")),
+    path("authentication_s_jwt/", include("app_authentication_s_jwt.api.urls")),
+    path("app_throttle/", include("app_throttle.api.urls")),
 
 
 

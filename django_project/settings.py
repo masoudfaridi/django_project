@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "app_user",
     "app_authentication",
     "app_authentication_s_jwt",
+    "app_throttle",
 
 
     "app_for_test",
@@ -145,5 +146,12 @@ REST_FRAMEWORK = {
     #     #"rest_framework.authentication.SessionAuthentication",
     #     #"rest_framework.authentication.TokenAuthentication",
     #     #'rest_framework_simplejwt.authentication.JWTAuthentication',
-    # ]
+    # ],
+    # 'DEFAULT_THROTTLE_CLASSES': [
+    #     'rest_framework.throttling.ScopedRateThrottle',
+    # ],
+    # 'DEFAULT_THROTTLE_RATES': {
+    #     'contacts': '1000/day',
+    #     'uploads': '20/day'
+    # }
 }
