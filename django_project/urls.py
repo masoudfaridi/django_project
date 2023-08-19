@@ -22,6 +22,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("users/", include("app_user.api.urls")),
     path("authentication/", include("app_authentication.api.urls")),
+    path("app_authentication_s_jwt/", include("app_authentication_s_jwt.api.urls")),
+
+
 
 
     path("app_for_test/", include("app_for_test.urls")),

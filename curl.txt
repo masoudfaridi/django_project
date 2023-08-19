@@ -1,0 +1,124 @@
+library(rvest)
+library(dplyr)
+pg<- session('http://127.0.0.1:8000/api/schema/swagger-ui/#/app_api_crud/app_api_crud_create')
+# pg<- html_session("http://127.0.0.1:8000/api/v1/")
+toekn <- read_html(pg) %>%
+  html_node(xpath="//meta[@name='csrf-toekn']") %>%
+  html_attr("content")
+
+
+
+
+"http://127.0.0.1:8000/app_api_functions/add/?a=1&b=3"
+
+
+
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/add/?a=1&b=3" \
+
+
+curl -X 'GET' \
+ "http://127.0.0.1:8000/app_api_functions/add/?a=1&b=3" \
+ -H 'Authorization: Token e024b7f50438292943fdcc57a854ef1d1ec9bfe4' 
+
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/add?a=1&b=3" \
+-H 'Authorization: Token 024b7f50438292943fdcc57a854ef1d1ec9bfe4' 
+
+curl -X 'POST' \
+'http://127.0.0.1:8000/api/v1/dj-rest-auth/login/' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+  "username": "admin",
+  "email": "",
+  "password": "admin"
+}'
+
+
+
+
+
+
+
+
+
+
+
+
+curl -X 'POST' \
+'http://127.0.0.1:8000/app_api_crud/' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-H 'X-CSRFTOKEN: a1wAdqbYfdRkjp45J63pIsNTH7kISNP6AuRiD0Q1QcZtQu20HlrW0NugXi3TI4HY' \
+-d '{
+  "title": "title 2",
+  "content": "content 2",
+  "category": "category 2"
+}'
+
+
+curl -X 'POST' \
+'http://127.0.0.1:8000/app_api_crud/' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Token e024b7f50438292943fdcc57a854ef1d1ec9bfe4' \
+-d '{
+  "title": "title 8",
+  "content": "content 8",
+  "category": "category 8"
+}'
+
+
+
+
+
+
+
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/class_view_add/?a=3&b=6" \
+-H 'Authorization: Token c7517af09c9b24e027fc0ddb7382670f1a3da59c'
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/class_view_add_TokenAuthentication/?a=3&b=6" \
+-H 'Authorization: Token c7517af09c9b24e027fc0ddb7382670f1a3da59c'
+
+
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/class_view_add_IsAdminUser/?a=3&b=6" \
+-H 'Authorization: Token c7517af09c9b24e027fc0ddb7382670f1a3da59c'
+
+
+
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/class_view_add_IsAdminUser/?a=3&b=6" \
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkxOTA4MDY0LCJpYXQiOjE2OTE5MDc3NjQsImp0aSI6IjM1MmNiODZkOTRkYzRkODY4NWFkMDI0MGM1MGEyOTFmIiwidXNlcl9pZCI6MX0.J_j6zGQ741OrIfTPfhglYT-9ag4XEfWVvUtRY9HA11o'
+
+
+
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/class_view_add/?a=3&b=6" \
+-H 'Authorization: Bearer '
+
+
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/class_view_add/?a=3&b=6" \
+-H 'Authorization: Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkxOTE0NDQzLCJpYXQiOjE2OTE5MTQxNDMsImp0aSI6ImM0OWYzZWE5OGY2NTRhZDRiNTQ2ZmNkMTE3YzlkZDRmIiwidXNlcl9pZCI6MX0.29rQV-sqMzNXQ3xk3S_zqWCzxFGvqyF8F3yzZ6lDo-A'
+
+
+#######################
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/add/?a=3&b=6" \
+-H 'Authorization: Bearer '
+
+curl -X 'GET' \
+"http://127.0.0.1:8000/app_api_functions/add/?a=3&b=7" \
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkxOTE5OTY2LCJpYXQiOjE2OTE5MTk2NjYsImp0aSI6ImVmNzQxMDAwOWFlMjQwNWE5OGJmMzU2ZjQ0NzYyZjE3IiwidXNlcl9pZCI6MX0.-KsS1GN6r3TNNjjsXn2U1FFL6E8_T7XADwWQrGykEbc'

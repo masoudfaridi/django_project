@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     ### local app
     "app_user",
     "app_authentication",
+    "app_authentication_s_jwt",
+
+
     "app_for_test",
 ]
 
